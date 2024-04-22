@@ -133,7 +133,7 @@ const gridCards = document.querySelectorAll('.grid_card');
     const api_spark = document.getElementById('response-container');
     api_spark.innerHTML = '';
     const animationInterval = Loading_spark();
-    fetch('http://localhost:3000/', {
+    fetch('https://wise-adder-loyal.ngrok-free.app', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
