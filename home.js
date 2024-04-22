@@ -230,7 +230,7 @@ questionForm.addEventListener('submit', async (event) => {
 });
 
 async function sendMessage(message) {
-
+// get res from open ai
     const response = await fetch("https://wise-adder-loyal.ngrok-free.app/introvertcopilot", {
         method: 'POST',
         headers: {
