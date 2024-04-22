@@ -192,12 +192,21 @@ questionForm.addEventListener('submit', async (event) => {
     event.preventDefault();
     delete_intro ()
 
-    const existingPersonalData = localStorage.getItem('personaldata') || '';
-
+    let existingPersonalData = localStorage.getItem('personaldata');
     
-    const message = existingPersonalData + ' ' + inputField.value;
+    // Check if existingPersonalData is null or empty, initialize as an empty array if so
+    if (!existingPersonalData) {
+        existingPersonalData = [];
+    } else {
+        // Parse the stored string back into an array
+        existingPersonalData = JSON.parse(existingPersonalData);
+    }
 
-    
+    // Push the new message into the array
+    existingPersonalData.push(inputField.value);
+    const message = (existingPersonalData.join(' '))
+
+
     const input = inputField.value 
     inputField.value = '';
     console.log(message);
