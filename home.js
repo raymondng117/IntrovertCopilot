@@ -3,7 +3,6 @@ const inputField = document.getElementById('input-field');
 const questionForm = document.getElementById('question_form');
 const $intro_bot = document.getElementById('intro_bot')
 const $intro_user = document.getElementById('intro_user')
-require('dotenv').config();
 
 
 const characters = [{
