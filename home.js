@@ -231,7 +231,7 @@ questionForm.addEventListener('submit', async (event) => {
 
 async function sendMessage(message) {
 
-    const response = await fetch(OPENAI_API, {
+    const response = await fetch("https://wise-adder-loyal.ngrok-free.app/introvertcopilot", {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
